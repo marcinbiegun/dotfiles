@@ -1,0 +1,65 @@
+" move with CTRL+J, etc.
+nnoremap <silent> <C-l> <C-w>l
+nnoremap <silent> <C-h> <C-w>h
+nnoremap <silent> <C-k> <C-w>k
+nnoremap <silent> <C-j> <C-w>j
+
+" https://github.com/morhetz/gruvbox
+let g:molokai_original = 1
+colorscheme molokai
+set guifont=Monaco:h15
+set background=dark
+
+set scrolloff=8
+
+" Disable bell
+set vb
+
+" Disable visual mode key
+:map Q <Nop>
+
+" Leader key
+let mapleader=" "
+:map <Leader>q :q<Esc>
+:map <Leader>w :w<Esc>
+:map <Leader>n :NERDTree<Esc>
+:map <Leader>a :Ack
+
+" Always use file dir as current dir
+autocmd BufEnter * silent! lcd %:p:h
+
+" Strip trailing whitespace function
+function! <SID>StripTrailingWhitespaces()
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+
+" DISABLED
+" autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" Disable some default crap
+:map K <Nop>
+
+" Scripts
+" :map <leader>i :!~/bin/base-translate email substeps coffee<cr>
+" :map <leader>o :!~/bin/base-translate email substeps handlebars<cr>
+
+" Disable reloading NERTDTree on window focus
+autocmd! AuNERDTreeCmd FocusGained
+
+" e-script
+autocmd BufNewFile,BufReadPost *.inc,*.src set filetype=escript
+let NERDTreeIgnore = ['\.dbg$', '\.dbg\.txt$', '\.ecl$', '\.lst$', '\.dep$']
+
+" CTRL+P search
+let g:ctrlp_max_files=60000
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  'node_modules\|DS_Store\|git\|build',
+    \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }

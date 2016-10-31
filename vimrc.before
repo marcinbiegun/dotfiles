@@ -1,0 +1,4 @@
+" Change leader key
+let mapleader = " "
+call janus#disable_plugin('snipmate')
+call janus#disable_plugin('vim-snippets')

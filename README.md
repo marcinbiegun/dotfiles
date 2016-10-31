@@ -1,2 +1,3 @@
-dotfiles
-========
+# Dotfiles
+
+Collection of my dotfiles.

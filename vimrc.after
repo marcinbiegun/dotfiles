@@ -4,11 +4,29 @@ nnoremap <silent> <C-h> <C-w>h
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-j> <C-w>j
 
-" https://github.com/morhetz/gruvbox
-let g:molokai_original = 1
-colorscheme molokai
-set guifont=Monaco:h15
+
+" font
+"set guifont=Source_Code_Pro:h14
+set guifont=Monaco:h14
+
+
+" color sheme options ------------
+"
 set background=dark
+let g:molokai_original = 1
+let ayucolor="mirage"
+"let ayucolor="dark"
+"let ayucolor="light"
+
+
+"colorscheme molokai
+colorscheme ayu
+
+" -------------------------------
+
+
+
+au BufRead,BufNewFile *.cy set filetype=javascript
 
 set scrolloff=8
 
@@ -61,5 +79,5 @@ let NERDTreeIgnore = ['\.dbg$', '\.dbg\.txt$', '\.ecl$', '\.lst$', '\.dep$']
 " CTRL+P search
 let g:ctrlp_max_files=60000
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  'node_modules\|DS_Store\|git\|build',
+    \ 'dir':  'tmp\|node_modules\|DS_Store\|git\|build\|public',
     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }

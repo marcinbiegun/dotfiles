@@ -55,7 +55,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+#plugins=(git zsh-autosuggestions)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,7 +115,7 @@ alias be="bundle exec"
 # Run ls after cd
 function chpwd() {
   emulate -L zsh
-  ls
+  colorls
 }
 
 # App bins
@@ -127,9 +128,15 @@ PATH=$PATH:~/.asdf/installs/nodejs/10.0.0/.npm/bin
 # Syntax highlighting
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+
+
+
+
+
+#
 # Powerline
+#
 POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 # Add a space in the first prompt
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%f"
@@ -139,8 +146,18 @@ local user_symbol="$"
 if [[ $(print -P "%#") =~ "#" ]]; then
     user_symbol = "#"
 fi
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $user_symbol%{%b%f%k%F{yellow}%} %{%f%}"
+
+# Multiline status
+#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $user_symbol%{%b%f%k%F{yellow}%} %{%f%}"
+#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+
 source  ~/.powerlevel9k/powerlevel9k.zsh-theme
+# Disable showint user and host
+prompt_context() {}
+
+
+
+
 
 # Colorls
 alias ls="colorls"

@@ -1,3 +1,7 @@
+# #
+# Tutorial followed: https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961
+#
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -51,7 +55,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,3 +123,24 @@ alias blender="/Applications/blender.app/Contents/MacOS/blender"
 
 # Hack for accesign nodejs bins
 PATH=$PATH:~/.asdf/installs/nodejs/10.0.0/.npm/bin
+
+# Syntax highlighting
+source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Powerline
+POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+
+# Add a space in the first prompt
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%f"
+
+# Visual customisation of the second prompt line
+local user_symbol="$"
+if [[ $(print -P "%#") =~ "#" ]]; then
+    user_symbol = "#"
+fi
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $user_symbol%{%b%f%k%F{yellow}%} %{%f%}"
+source  ~/.powerlevel9k/powerlevel9k.zsh-theme
+
+# Colorls
+alias ls="colorls"

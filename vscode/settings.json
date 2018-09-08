@@ -3,12 +3,28 @@
     "window.zoomLevel": 0,
     "workbench.colorTheme": "One Dark Pro",
 
+    //"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace"
     "editor.fontFamily": "'Fira Code', Consolas, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
-    //"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace"
 
     // Open files from explorer in new tabs
     "workbench.editor.enablePreview": false,
+
+    // VSCodeVim settings
     "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>","w"],
+            "commands": [
+              "workbench.action.files.save"
+            ]
+        },
+        {
+            "before": ["<leader>","q"],
+            "commands": [
+              "workbench.action.closeActiveEditor"
+            ]
+        },
+    ]
 }

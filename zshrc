@@ -1,6 +1,11 @@
-# #
+#
 # Tutorial followed: https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961
 #
+# Cool terminal tools: https://remysharp.com/2018/08/23/cli-improved
+#
+
+
+
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -130,9 +135,6 @@ source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 
-
-
-
 #
 # Powerline
 #
@@ -155,9 +157,12 @@ source  ~/.powerlevel9k/powerlevel9k.zsh-theme
 # Disable showint user and host
 prompt_context() {}
 
-
-
-
-
 # Colorls
 alias ls="colorls"
+
+
+
+# Golang
+export GOPATH=$HOME/Projects/go
+export PATH=$PATH:$GOPATH/bin
+

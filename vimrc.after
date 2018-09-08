@@ -81,3 +81,7 @@ let g:ctrlp_max_files=60000
 let g:ctrlp_custom_ignore = {
     \ 'dir':  'tmp\|node_modules\|DS_Store\|git\|build\|public',
     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
+
+" Run Go files
+map <F8> :GoRun <CR>
+

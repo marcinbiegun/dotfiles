@@ -1,0 +1,5 @@
+# Include the ignore file:
+#   git config --global core.excludesfile ~/.gitignore_global
+
+.elixir_ls
+

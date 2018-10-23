@@ -26,5 +26,29 @@
               "workbench.action.closeActiveEditor"
             ]
         },
-    ]
+        {
+            "before": ["<leader>","t"],
+            "commands": [
+              "workbench.action.tasks.runTask"
+            ]
+        },
+        {
+            "before": ["<leader>","c"],
+            "commands": [
+              "editor.action.commentLine"
+            ]
+        }
+
+
+    ],
+    "explorer.confirmDelete": false,
+    "breadcrumbs.enabled": true,
+
+     "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/.elixir_ls": true,
+        "**/tmp": true
+    }
 }

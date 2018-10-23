@@ -161,8 +161,13 @@ prompt_context() {}
 alias ls="colorls"
 
 
-
 # Golang
 export GOPATH=$HOME/Projects/go
 export PATH=$PATH:$GOPATH/bin
+
+
+
+# Project dirs
+alias api="~/Contractbook/api"
+alias web"=~/Contractbook/web"
 

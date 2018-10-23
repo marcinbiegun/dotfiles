@@ -1,0 +1,5 @@
+\pset null ∅
+\pset format aligned
+
+\x auto
+\set COMP_KEYWORD_CASE upper

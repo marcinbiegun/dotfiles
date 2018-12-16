@@ -98,6 +98,9 @@ source $ZSH/oh-my-zsh.sh
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
+# Add bin from my dotfiles
+PATH=$PATH:~/Projects/dotfiles/bin
+
 # Git aliases
 alias gb="git branch"
 alias gc="git checkout"
@@ -132,6 +135,7 @@ PATH=$PATH:~/.asdf/installs/nodejs/10.0.0/.npm/bin
 
 # Syntax highlighting
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 
 

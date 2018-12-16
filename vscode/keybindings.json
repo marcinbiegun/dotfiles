@@ -96,10 +96,20 @@
         "key": "ctrl+9",
         "command": "-workbench.action.openEditorAtIndex9"
     },
-    // open file from File Explorer
     {
-      "key": "o",
-      "command": "list.select",
-      "when": "explorerViewletVisible && filesExplorerFocus"
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.navigateDown"
     }
 ]

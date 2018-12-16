@@ -5,41 +5,43 @@ class TaskpaperArchiveDoneTest < Minitest::Test
   def test_returns_new_content_with_no_done_things_and_archive_with_done_things
     content = [
       "Life:",
-      "  get one",
-      "  ",
+      "\tget one",
+      "\t",
       "Programming:",
-      "  - read books @done",
-      "    - Clean Code",
-      "  - do courses",
-      "    - ruby @done",
-      "    - elixir",
-      "  - eat lunch",
-      "  ",
-      "  ",
+      "\t- read books @done",
+      "\t\t- Clean Code",
+      "\t- contribue",
+      "\t- do courses",
+      "\t\t- ruby @done",
+      "\t\t- elixir",
+      "\t- eat lunch",
+      "\t",
+      "",
       "Other:",
-      "  - buy milk"
+      "\t- buy milk"
     ].join("\n")
 
     expected_new_content = [
       "Life:",
-      "  get one",
-      "  ",
+      "\tget one",
+      "\t",
       "Programming:",
-      "  - do courses",
-      "    - elixir",
-      "  - eat lunch",
-      "  ",
-      "  ",
+      "\t- contribue",
+      "\t- do courses",
+      "\t\t- elixir",
+      "\t- eat lunch",
+      "\t",
+      "",
       "Other:",
-      "  - buy milk"
+      "\t- buy milk"
     ].join("\n")
 
     expected_archive = [
       "Programming:",
-      "  - read books @done",
-      "    - Clean Code",
-      "  - do courses",
-      "    - ruby @done"
+      "\t- read books @done",
+      "\t\t- Clean Code",
+      "\t- do courses",
+      "\t\t- ruby @done"
     ].join("\n")
 
     new_content, archive = Taskpaper::ArchiveDone.call(content)

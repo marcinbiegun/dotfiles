@@ -1,0 +1,55 @@
+#!/usr/bin/ruby
+
+require "date"
+require "../scripts/taskpaper/archive_done"
+
+class String
+  def red
+    "\e[#{31}m#{self}\e[0m"
+  end
+
+  def green
+    "\e[#{32}m#{self}\e[0m"
+  end
+end
+
+HELP = "\nUsage: taskpaper_archive_done [filename]\n\n"
+
+file_path = ARGV[0]
+unless file_path
+  puts HELP
+  exit
+end
+
+unless File.exist?(file_path)
+  puts "File #{file_path} not found".red
+  exit
+end
+
+content = File.open(file_path).read
+new_content, new_archive = Taskpaper::ArchiveDone.call(content)
+
+date = Date.today.to_s
+new_content_path = file_path.reverse.sub(".", "_new.".reverse).reverse
+new_archive_path = file_path.reverse.sub(".", "_done_#{date}.".reverse).reverse
+
+if File.exist?(new_content_path)
+  puts "File #{new_content_path} already exists".red
+  exit
+end
+
+if File.exist?(new_archive_path)
+  puts "File #{new_archive_path} already exists".red
+  exit
+end
+
+File.open(new_content_path, 'w') do |file|
+  file.write(new_content + "\n")
+end
+
+File.open(new_archive_path, 'w') do |file|
+  file.write(new_archive + "\n")
+end
+
+puts "Written remaining non-done to: #{new_content_path}
+Written archived done to: #{new_archive_path}".green

@@ -38,8 +38,6 @@
               "editor.action.commentLine"
             ]
         }
-
-
     ],
     "explorer.confirmDelete": false,
     "breadcrumbs.enabled": true,
@@ -50,5 +48,16 @@
         "**/bower_components": true,
         "**/.elixir_ls": true,
         "**/tmp": true
-    }
+    },
+    "python.pythonPath": "~/.asdf/installs/python/3.5.4/bin/python",
+    "python.jediEnabled": false,
+
+    // Languages
+    "[sql]": {
+      "editor.tabSize":2,
+      "editor.insertSpaces": true
+    },
+    "extensions.ignoreRecommendations": false,
+    "explorer.confirmDragAndDrop": false,
+    "python.linting.pylintEnabled": true
 }

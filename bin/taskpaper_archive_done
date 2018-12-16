@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 
 require "date"
-require "../scripts/taskpaper/archive_done"
+require_relative "../scripts/taskpaper/archive_done"
 
 class String
   def red

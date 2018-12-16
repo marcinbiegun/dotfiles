@@ -111,17 +111,17 @@ alias gf="git fetch"
 alias gui="git gui"
 alias rs="bundle exec rspec spec"
 alias r="bundle exec rspec"
-
 alias be="bundle exec"
-
-# Project aliases
-# alias relay="cd ~/Projects/relay"
 
 # Run ls after cd
 function chpwd() {
   emulate -L zsh
   colorls
 }
+
+# LS replacement
+#alias ls="exa"
+alias ls="colorls"
 
 # App bins
 alias inkscape="/Applications/Inkscape.app/Contents/Resources/bin/inkscape"
@@ -157,10 +157,6 @@ source  ~/.powerlevel9k/powerlevel9k.zsh-theme
 # Disable showint user and host
 prompt_context() {}
 
-# Colorls
-alias ls="colorls"
-
-
 # Golang
 export GOPATH=$HOME/Projects/go
 export PATH=$PATH:$GOPATH/bin
@@ -170,4 +166,17 @@ export PATH=$PATH:$GOPATH/bin
 # Project dirs
 alias api="~/Contractbook/api"
 alias web"=~/Contractbook/web"
+alias data"=~/Contractbook/data"
+alias charts"=~/Contractbook/charts"
 
+# Symlinks
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+
+PATH="/Users/n23/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/n23/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/n23/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/n23/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/n23/perl5"; export PERL_MM_OPT;
+
+# Helm
+HELM_HOME="~/.helm"

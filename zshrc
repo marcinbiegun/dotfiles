@@ -119,12 +119,11 @@ alias be="bundle exec"
 # Run ls after cd
 function chpwd() {
   emulate -L zsh
-  colorls
+  lsd
 }
 
 # LS replacement
-#alias ls="exa"
-alias ls="colorls"
+alias ls="lsd"
 
 # App bins
 alias inkscape="/Applications/Inkscape.app/Contents/Resources/bin/inkscape"
@@ -136,8 +135,8 @@ PATH=$PATH:~/.asdf/installs/nodejs/10.0.0/.npm/bin
 # Syntax highlighting
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-
+# Elixir helpers
+alias dmix="DEBUG=true iex -S mix"
 
 #
 # Powerline
@@ -172,6 +171,8 @@ alias api="~/Contractbook/api"
 alias web"=~/Contractbook/web"
 alias data"=~/Contractbook/data"
 alias charts"=~/Contractbook/charts"
+alias docx2pdf"=~/Contractbook/docx2pdf"
+alias file_service"=~/Contractbook/file_service"
 
 # Symlinks
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
@@ -184,3 +185,5 @@ PERL_MM_OPT="INSTALL_BASE=/Users/n23/perl5"; export PERL_MM_OPT;
 
 # Helm
 HELM_HOME="~/.helm"
+
+

@@ -111,5 +111,15 @@
     {
         "key": "ctrl+j",
         "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "ctrl+shift+alt+enter",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     }
 ]

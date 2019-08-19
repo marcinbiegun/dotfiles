@@ -186,4 +186,6 @@ PERL_MM_OPT="INSTALL_BASE=/Users/n23/perl5"; export PERL_MM_OPT;
 # Helm
 HELM_HOME="~/.helm"
 
+# Enable Elixir iex history
+export ERL_AFLAGS="-kernel shell_history enabled"
 

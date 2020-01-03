@@ -182,16 +182,6 @@ prompt_context() {}
 export GOPATH=$HOME/Projects/go
 export PATH=$PATH:$GOPATH/bin
 
-
-
-# Project dirs
-alias api="~/Contractbook/api"
-alias web"=~/Contractbook/web"
-alias data"=~/Contractbook/data"
-alias charts"=~/Contractbook/charts"
-alias docx2pdf"=~/Contractbook/docx2pdf"
-alias file_service"=~/Contractbook/file_service"
-
 # Symlinks
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
@@ -200,9 +190,6 @@ PERL5LIB="/Users/n23/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/Users/n23/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/Users/n23/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/n23/perl5"; export PERL_MM_OPT;
-
-# Helm
-HELM_HOME="~/.helm"
 
 # Enable Elixir iex history
 export ERL_AFLAGS="-kernel shell_history enabled"

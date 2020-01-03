@@ -1,11 +1,10 @@
 #
-# Tutorial followed: https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961
+# ZSH plugins tutorial
+#   * https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961
 #
-# Cool terminal tools: https://remysharp.com/2018/08/23/cli-improved
+# Command replacements tutorial
+#   * https://remysharp.com/2018/08/23/cli-improved
 #
-
-
-
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -169,11 +168,13 @@ if [[ $(print -P "%#") =~ "#" ]]; then
     user_symbol = "#"
 fi
 
-# Multiline status
-#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $user_symbol%{%b%f%k%F{yellow}%} %{%f%}"
-#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# Powerline: Multiline status
+# POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $user_symbol%{%b%f%k%F{yellow}%} %{%f%}"
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
-source  ~/.powerlevel9k/powerlevel9k.zsh-theme
+#source ~/.powerlevel9k/powerlevel9k.zsh-theme
+source ~/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme
+
 # Disable showint user and host
 prompt_context() {}
 

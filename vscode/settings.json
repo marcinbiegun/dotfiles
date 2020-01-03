@@ -1,7 +1,6 @@
 {
     "vim.disableAnnoyingNeovimMessage": true,
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "One Dark Pro",
 
     //"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace"
     "editor.fontFamily": "'Fira Code', Consolas, Menlo, Monaco, 'Courier New', monospace",
@@ -62,5 +61,10 @@
     "python.linting.pylintEnabled": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "editor.minimap.enabled": false,
-    "elixirLS.suggestSpecs": false
+    "elixirLS.suggestSpecs": false,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "Darcula theme for Elixir"
 }

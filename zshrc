@@ -105,12 +105,13 @@ PATH=$PATH:~/Projects/dotfiles/bin
 alias gb="git branch"
 alias gc="git checkout"
 alias gd="git diff"
+alias gf="git fetch"
 alias gg="git gui"
 alias gm="git merge"
+alias gp="git pull"
+alias gpo="git push origin"
 alias gr="git rebase"
 alias gs="git status"
-alias gpo="git push origin"
-alias gf="git fetch"
 alias gui="git gui"
 alias rs="bundle exec rspec spec"
 alias r="bundle exec rspec"
@@ -122,8 +123,23 @@ function chpwd() {
   lsd
 }
 
-# LS replacement
+# ls replacement
 alias ls="lsd"
+
+# du replacement
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+
+# cat replacement
+alias cat="bat"
+
+# du replacement
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+
+# ping replacement
+alias ping="prettyping --nolegend"
+
+# fzf replacement for ctrl+R
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # App bins
 alias inkscape="/Applications/Inkscape.app/Contents/Resources/bin/inkscape"
@@ -133,7 +149,8 @@ alias blender="/Applications/blender.app/Contents/MacOS/blender"
 PATH=$PATH:~/.asdf/installs/nodejs/10.0.0/.npm/bin
 
 # Syntax highlighting
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Elixir helpers
 alias dmix="DEBUG=true iex -S mix"

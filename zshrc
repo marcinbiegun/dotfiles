@@ -194,3 +194,6 @@ PERL_MM_OPT="INSTALL_BASE=/Users/n23/perl5"; export PERL_MM_OPT;
 # Enable Elixir iex history
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+# Hide warning for git gui
+export TK_SILENCE_DEPRECATION=1
+

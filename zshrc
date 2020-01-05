@@ -1,11 +1,10 @@
 #
-# Tutorial followed: https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961
+# ZSH plugins tutorial
+#   * https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961
 #
-# Cool terminal tools: https://remysharp.com/2018/08/23/cli-improved
+# Command replacements tutorial
+#   * https://remysharp.com/2018/08/23/cli-improved
 #
-
-
-
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -105,12 +104,13 @@ PATH=$PATH:~/Projects/dotfiles/bin
 alias gb="git branch"
 alias gc="git checkout"
 alias gd="git diff"
+alias gf="git fetch"
 alias gg="git gui"
 alias gm="git merge"
+alias gp="git pull"
+alias gpo="git push origin"
 alias gr="git rebase"
 alias gs="git status"
-alias gpo="git push origin"
-alias gf="git fetch"
 alias gui="git gui"
 alias rs="bundle exec rspec spec"
 alias r="bundle exec rspec"
@@ -122,8 +122,23 @@ function chpwd() {
   lsd
 }
 
-# LS replacement
+# ls replacement
 alias ls="lsd"
+
+# du replacement
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+
+# cat replacement
+alias cat="bat"
+
+# du replacement
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+
+# ping replacement
+alias ping="prettyping --nolegend"
+
+# fzf replacement for ctrl+R
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # App bins
 alias inkscape="/Applications/Inkscape.app/Contents/Resources/bin/inkscape"
@@ -133,7 +148,8 @@ alias blender="/Applications/blender.app/Contents/MacOS/blender"
 PATH=$PATH:~/.asdf/installs/nodejs/10.0.0/.npm/bin
 
 # Syntax highlighting
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Elixir helpers
 alias dmix="DEBUG=true iex -S mix"
@@ -152,27 +168,19 @@ if [[ $(print -P "%#") =~ "#" ]]; then
     user_symbol = "#"
 fi
 
-# Multiline status
-#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $user_symbol%{%b%f%k%F{yellow}%} %{%f%}"
-#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# Powerline: Multiline status
+# POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $user_symbol%{%b%f%k%F{yellow}%} %{%f%}"
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
-source  ~/.powerlevel9k/powerlevel9k.zsh-theme
+#source ~/.powerlevel9k/powerlevel9k.zsh-theme
+source ~/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme
+
 # Disable showint user and host
 prompt_context() {}
 
 # Golang
 export GOPATH=$HOME/Projects/go
 export PATH=$PATH:$GOPATH/bin
-
-
-
-# Project dirs
-alias api="~/Contractbook/api"
-alias web"=~/Contractbook/web"
-alias data"=~/Contractbook/data"
-alias charts"=~/Contractbook/charts"
-alias docx2pdf"=~/Contractbook/docx2pdf"
-alias file_service"=~/Contractbook/file_service"
 
 # Symlinks
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
@@ -182,9 +190,6 @@ PERL5LIB="/Users/n23/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/Users/n23/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/Users/n23/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/n23/perl5"; export PERL_MM_OPT;
-
-# Helm
-HELM_HOME="~/.helm"
 
 # Enable Elixir iex history
 export ERL_AFLAGS="-kernel shell_history enabled"

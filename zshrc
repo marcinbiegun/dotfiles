@@ -129,7 +129,7 @@ alias ls="lsd"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 
 # cat replacement
-alias cat="bat"
+# alias cat="bat"
 
 # du replacement
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"

@@ -19,7 +19,7 @@ import sys
 
 taskpaper_file = '~/todo.taskpaper'
 tag = 'now'
-emoji_prefix = '👉'
+emoji_prefix = '🍅'
 
 try:
     file = open(os.path.expanduser(taskpaper_file), 'r')

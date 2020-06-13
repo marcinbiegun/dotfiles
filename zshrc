@@ -6,6 +6,13 @@
 #   * https://remysharp.com/2018/08/23/cli-improved
 #
 
+# Source private settings (not in git)
+source ~/.zshrc.priv
+
+# Initialize bash autocomplete
+autoload bashcompinit
+bashcompinit
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -60,7 +67,11 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git zsh-autosuggestions)
-plugins=(git)
+plugins=(
+  git
+  fzf-zsh
+  zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,7 +119,7 @@ alias gf="git fetch"
 alias gg="git gui"
 alias gm="git merge"
 alias gp="git pull"
-alias gpo="git push origin"
+alias gpo="git push origin $(git rev-parse --abbrev-ref HEAD)"
 alias gr="git rebase"
 alias gs="git status"
 alias gui="git gui"
@@ -137,7 +148,7 @@ alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 # ping replacement
 alias ping="prettyping --nolegend"
 
-# fzf replacement for ctrl+R
+# fzf replacement for ctrl+R shell history search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # App bins
@@ -196,4 +207,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Hide warning for git gui
 export TK_SILENCE_DEPRECATION=1
+
+# Erlang flags
+export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-hipe --enable-sctp --enable-smp-support --enable-threads --enable-kernel-poll --enable-wx --enable-darwin-64bit --with-ssl=/usr/local/Cellar/openssl@1.1/1.1.1d"
 

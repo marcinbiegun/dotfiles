@@ -111,6 +111,23 @@
 			<dict>
 				<key>paths</key>
 				<array>
+					<string>/Applications/Visual Studio Code.app</string>
+				</array>
+				<key>toggle</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>F34D4BEB-FC85-4360-8BED-8C671FD12C69</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
 					<string>/Applications/Unity/Hub/Editor/2019.2.2f1/Unity.app</string>
 				</array>
 				<key>toggle</key>
@@ -128,7 +145,7 @@
 			<dict>
 				<key>paths</key>
 				<array>
-					<string>/Applications/Visual Studio Code.app</string>
+					<string>/Applications/Visual Studio Code - Insiders.app</string>
 				</array>
 				<key>toggle</key>
 				<false/>
@@ -136,7 +153,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.launchfiles</string>
 			<key>uid</key>
-			<string>F34D4BEB-FC85-4360-8BED-8C671FD12C69</string>
+			<string>737C80EB-546B-449C-8C41-D5D525509487</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -259,6 +276,13 @@ For more advanced use of the List Filter object, take a look at the "To-do list 
 			<key>ypos</key>
 			<integer>480</integer>
 		</dict>
+		<key>737C80EB-546B-449C-8C41-D5D525509487</key>
+		<dict>
+			<key>xpos</key>
+			<integer>680</integer>
+			<key>ypos</key>
+			<integer>190</integer>
+		</dict>
 		<key>7FE8D8F3-2275-456F-9E20-A3261CA30382</key>
 		<dict>
 			<key>xpos</key>
@@ -299,7 +323,7 @@ For more advanced use of the List Filter object, take a look at the "To-do list 
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>60</integer>
 		</dict>
 	</dict>
 	<key>version</key>

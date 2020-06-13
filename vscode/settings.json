@@ -1,6 +1,6 @@
 {
     "vim.disableAnnoyingNeovimMessage": true,
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "dark+(elixir)",
     "window.zoomLevel": 0,
     "extensions.ignoreRecommendations": false,
     "explorer.confirmDragAndDrop": false,
@@ -73,5 +73,7 @@
     },
     "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "scm.defaultViewMode": "tree",
+    "editor.lineNumbers": "relative"
 }

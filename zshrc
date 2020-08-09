@@ -5,6 +5,8 @@
 # Command replacements tutorial
 #   * https://remysharp.com/2018/08/23/cli-improved
 #
+# More recent tutorial
+#   * https://medium.com/@jeantimex/how-to-configure-iterm2-and-vim-like-a-pro-on-macos-e303d25d5b5c
 
 # Source private settings (not in git)
 source ~/.zshrc.priv

@@ -18,7 +18,7 @@ import re
 import sys
 
 taskpaper_file = '~/todo.taskpaper'
-tag = 'now'
+tag = 'doing'
 emoji_prefix = '🍅'
 
 try:

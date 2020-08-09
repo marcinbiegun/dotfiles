@@ -32,6 +32,8 @@ set scrolloff=8
 
 " Disable bell
 set vb
+set visualbell
+set t_vb=
 
 " Disable visual mode key
 :map Q <Nop>

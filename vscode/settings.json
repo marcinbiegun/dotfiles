@@ -1,6 +1,5 @@
 {
     "vim.disableAnnoyingNeovimMessage": true,
-    "workbench.colorTheme": "dark+(elixir)",
     "window.zoomLevel": 0,
     "extensions.ignoreRecommendations": false,
     "explorer.confirmDragAndDrop": false,
@@ -9,7 +8,6 @@
     "editor.minimap.enabled": false,
     "elixirLS.suggestSpecs": false,
     "oneDarkPro.vivid": true,
-    "editor.formatOnSave": true,
 
     //"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace"
     "editor.fontFamily": "'Fira Code', Consolas, Menlo, Monaco, 'Courier New', monospace",
@@ -47,6 +45,12 @@
             ]
         }
     ],
+    "vim.commandLineModeKeyBindings": [
+        {
+            "before": ["W", "<CR>"],
+            "after": ["w", "<CR>"]
+        }
+    ],
     "vim.insertModeKeyBindings": [
       {
           "before": ["j", "k"],
@@ -75,5 +79,8 @@
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "scm.defaultViewMode": "tree",
-    "editor.lineNumbers": "relative"
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "dark+(elixir)",
+    "python.languageServer": "Pylance",
+    "terminal.integrated.inheritEnv": false
 }
